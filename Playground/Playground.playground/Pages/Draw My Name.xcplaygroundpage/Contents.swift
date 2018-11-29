@@ -19,8 +19,11 @@ canvas.drawing { t in
     t.penSize(5)
 
     // Draw my name
+    t.uppercaseJ(scaleFactor: 2.0)
     t.uppercaseJ()
+    t.lowercaseI(scaleFactor: 2.0)
     t.lowercaseI()
+    t.lowercaseE(scaleFactor: 2.0)
     t.lowercaseE()
     t.lowercaseU()
     t.lowercaseN()
