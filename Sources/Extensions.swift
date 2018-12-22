@@ -207,4 +207,70 @@ public extension Tortoise {
         self.right(75)
         self.forward(30)
     }
+
+        //draw cosmos flower
+        func drawcosmos() {
+            for _ in 1...20 {
+                self.right(90)
+                self.forward(65)
+                self.left(45)
+                self.forward(55)
+                self.left(135)
+                self.forward(60)
+                self.left(48)
+                self.forward(53)
+            }
+
+        //draw rose next to cosmos flower
+
+            func drawrose() {
+                self.penUp()
+                self.right(60)
+                self.forward(150)
+                self.goto(-10, 0)
+                self.penDown()
+                self.right(1)
+                self.backward(20)
+                self.curve(withSides: 20, withSize: 10, drawSides: 4)
+                self.forward(10)
+
+                self.forward(5)
+                self.left(40)
+                self.forward(20)
+                self.right(10)
+                self.forward(10)
+                self.curve(withSides: 10, withSize: 20, drawSides: 30)
+
+                self.curve(withSides: 10, withSize: 10, drawSides: 6)
+                self.curve(withSides: 10, withSize: 30, drawSides: 20)
+                self.curve(withSides: 10, withSize: 20, drawSides: 15)
+
+                    for _ in 1...6 {
+                    self.curve(withSides: 10, withSize: 10, drawSides: 10)
+                    self.curve(withSides: 10, withSize: 30, drawSides: 20)
+                    self.curve(withSides: 10, withSize: 20, drawSides: 15)
+                    self.curve(withSides: 30, withSize: 5, drawSides: 10)
+
+                    func square(withSize size: Double) {
+                        self.penDown()
+                        for _ in 1...4 {
+                            self.forward(size)
+                            self.right(90)
+                        }
+                        self.penUp()
+
+                    }
+
+                    func curve(withSides sideCount: Int, withSize size: Double, drawSides sideLimit: Int) {
+                        self.penDown()
+                        for _ in 1...sideLimit {
+                            self.forward(size)
+                            print(self.ycor)
+                            self.right(360/Double(sideCount))
+                        }
+                    }
+
+            }
+}
+}
 }
