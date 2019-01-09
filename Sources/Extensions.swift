@@ -267,6 +267,21 @@ public extension Tortoise {
                             self.forward(size)
                             print(self.ycor)
                             self.right(360/Double(sideCount))
+                            
+                            //draw circular shape
+                            
+                            func Circularshape
+                            for _ in 1...15{
+                                self.penUp()
+                                self.right(90)
+                                self.forward(30)
+                                self.penDown()
+                                
+                                self.curve(withSides: 3, withSize: 0, drawSides: 20)
+                                self.curve(withSides: 3, withSize: 30, drawSides: 20)
+                                self.curve(withSides: 3, withSize: 20, drawSides: 20)
+                                self.curve(withSides: 3, withSize: 10, drawSides: 20)
+                                
                         }
                     }
 

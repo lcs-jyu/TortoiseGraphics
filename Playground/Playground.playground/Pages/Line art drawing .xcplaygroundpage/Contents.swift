@@ -14,8 +14,8 @@ canvas.drawing { t in
     t.penDown()
    t.drawcosmos()
 //draw rose
-    t.Rose
+   t.Rose
 }
 
-}
+
 
